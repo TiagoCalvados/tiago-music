@@ -1,0 +1,22 @@
+# Local builds and downloads
+*.exe
+*.pdb
+*.zip
+dist/
+work/
+
+# Personal library, settings, and cached lyrics
+Library/
+settings.xml*
+lyrics-diagnostics.txt
+*.mp3
+*.m4a
+*.wav
+*.wma
+*.m3u
+*.m3u8
+*.lrc
+
+# Editor files
+.vs/
+*.user

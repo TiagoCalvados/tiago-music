@@ -1,0 +1,92 @@
+TIAGO MUSIC
+
+Open Tiago Music from the desktop shortcut, or double-click Tiago Music.exe.
+No account or internet connection is needed. Keep this app folder in place so
+the shortcut keeps working. Windows .NET Framework 4 or later is required.
+MP3 playback uses Windows' built-in audio components.
+
+LISTENING
+Opening Tiago Music automatically starts a random song from your last selected
+playlist. Shuffle is switched on at every launch, even if you turned it off
+in the previous session, and visits every song once before reshuffling.
+Click Playlists, select a saved playlist, then Play to switch playlists.
+Double-clicking a playlist also starts it. Play/Pause, Next, Previous, the seek bar and volume are available
+in the main window. Previous restarts the current song after three seconds;
+press it again near the beginning to return to the previous song.
+Double-click a song in the queue to start that song.
+
+The Voice greeting checkbox turns the optional spoken welcome on or off:
+"Tiago, which playlist would you like to listen to?"
+It uses an installed Windows voice, offline. There is no microphone use or
+voice recognition. The greeting is off by default.
+
+Playlists, greeting, volume and the selected playlist are saved between sessions.
+Reopening starts a new shuffled song from that playlist.
+Settings are stored in the Library folder beside Tiago Music.exe, with a backup.
+Keep this Library folder with the app. The desktop shortcut and direct app
+launch both use this same library.
+
+LYRICS
+Lyrics appear beside the player and update automatically when the song changes.
+Saved or local lyric files load first. With Auto enabled (the default), the
+app searches LRCLIB online when there are no saved lyrics for the current song.
+It sends the song name, never the audio. Matching lyrics are saved offline.
+Automatic lookup checks artist/title and recording duration, preferring timed
+lyrics. Music continues while a lookup runs; skipping cancels the old lookup.
+Turn Auto off to use only saved lyrics and explicit manual searches.
+Hide lyrics makes the window narrower. Find lyrics lets you choose another
+version manually, and Load LRC loads a local .lrc / .txt lyric file.
+Saved lyrics work offline. An internet connection is needed to find new lyrics.
+Timed LRC lyrics highlight and follow the current line during playback,
+including after seeking. Plain lyrics display without timed highlighting.
+Use -0.5s / +0.5s to adjust timing; Reset returns to zero. Positive delay
+helps when your MP3 has an extra intro. Lyrics are not available for every
+song or every recording. Lyric files are cached in Library\Lyrics; original
+music and lyric files are kept intact.
+
+FROM A SAMSUNG PHONE
+1. Samsung Music -> menu (three dots) -> Settings -> Manage playlists ->
+   Export my playlists. Menu labels can vary with the Samsung Music version.
+2. Connect the unlocked phone with a USB data cable; choose File transfer
+   / Android Auto on the phone if asked.
+3. In Windows File Explorer, COPY your music folders AND the exported M3U
+   or M3U8 playlist files to a folder on this PC. Keep album folders together
+   where possible. Copying keeps the originals on your phone intact.
+4. Click Add music folder in Tiago Music and choose that PC folder.
+   The app searches subfolders for songs and M3U/M3U8 playlists automatically.
+
+Phone paths are matched to songs in the selected copied folder. Exact and
+relative paths are preferred, followed by filename and shared folder suffixes.
+Duplicate filenames with no clear folder match stay unresolved rather than
+playing the wrong song. Playlists -> Import details shows unmatched entries.
+M3U8/UTF-8 and Windows-encoded M3U files are supported. Network URLs are not.
+
+Copying songs alone DOES NOT preserve custom playlists saved only inside
+Samsung Music. Export those playlists first when available. If a folder has
+only songs, the app offers that folder as a playlist.
+
+For music grouped into named folders, add each named folder separately to
+make it a separate playlist. Add the same folder again to refresh its songs
+or rematch exported playlists after fixing missing files. Renames are kept.
+Removing a saved playlist only removes it from Tiago Music. Original songs
+and exported playlist files are never edited, moved, or deleted by the app.
+
+Keep the copied music folders on this PC. The app references these files;
+it does not copy them into a separate library. A moved or disconnected folder
+can cause missing songs. WMA, WAV and M4A are also accepted where Windows has
+the required decoder. Protected files may not play.
+
+Samsung's export instructions:
+https://www.samsung.com/levant/support/apps-services/how-to-import-and-export-samsung-music-playlists/
+
+SOURCE AND BUILD
+Source code and build scripts are available at:
+https://github.com/TiagoCalvados/tiago-music
+Run Build.ps1 from that source folder in PowerShell to rebuild with Windows'
+installed .NET Framework C# compiler. No downloaded packages are required.
+
+Test switches (use a scratch folder, not your music library):
+Tiago Music.exe --self-test <scratch-folder>
+Tiago Music.exe --audio-test <test-mp3-at-least-4-seconds> <report-file>
+
+Tiago Music is a standalone Windows desktop app.
